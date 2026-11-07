@@ -7,6 +7,23 @@
 
 ---
 
+## 📐 System Architecture & Relational Schema Diagrams
+*(Architecture Visualizations — This project operates as a headless serverless backend. Visuals illustrate the modular script engine and database table schemas).*
+
+### 1. Google Apps Script Modular Engine Architecture
+<p align="center">
+  <img src="assets/screenshots/01-gas-engine-architecture.svg" alt="Google Apps Script Architecture" width="100%">
+  <em>Figure 1: Modular script architecture highlighting separation of concerns across Config, Auth, Database, Audit, and Utility layers.</em>
+</p>
+
+### 2. Google Sheets Relational Database Schema
+<p align="center">
+  <img src="assets/screenshots/02-relational-sheets-schema.svg" alt="Relational Sheets Schema" width="100%">
+  <em>Figure 2: Relational database design on Google Sheets showing primary keys, foreign keys, automated invoice sequencing, and immutable append-only audit logging.</em>
+</p>
+
+---
+
 ## ☁️ Overview & Value Proposition
 
 A modular, serverless ERP and distribution management engine built entirely within **Google Apps Script** using **Google Sheets as an ACID-compliant relational cloud database**. 

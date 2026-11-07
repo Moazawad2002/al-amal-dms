@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="schemaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1f18"/>
+      <stop offset="100%" stop-color="#050e0b"/>
+    </linearGradient>
+    <linearGradient id="tableHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f9d58"/>
+      <stop offset="100%" stop-color="#0b7a44"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#schemaBg)"/>
+  
+  <rect x="20" y="15" width="760" height="35" rx="6" fill="#0f2b21" stroke="#165b43"/>
+  <text x="35" y="38" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="700">Google Sheets Relational Database Architecture (Al Amal DMS)</text>
+
+  <!-- Table 1: Customers -->
+  <g transform="translate(25, 65)">
+    <rect width="220" height="160" rx="6" fill="#0c1d17" stroke="#165b43"/>
+    <rect width="220" height="28" rx="6" fill="url(#tableHeader)"/>
+    <text x="12" y="19" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">📑 Sheet: Customers (PK: id)</text>
+    <text x="12" y="50" fill="#a7f3d0" font-family="monospace" font-size="10">id: string (CUST-001)</text>
+    <text x="12" y="70" fill="#e2e8f0" font-family="monospace" font-size="10">name: string</text>
+    <text x="12" y="90" fill="#e2e8f0" font-family="monospace" font-size="10">rep_id: string (FK: Users)</text>
+    <text x="12" y="110" fill="#e2e8f0" font-family="monospace" font-size="10">credit_limit: number</text>
+    <text x="12" y="130" fill="#e2e8f0" font-family="monospace" font-size="10">current_balance: number</text>
+    <text x="12" y="150" fill="#e2e8f0" font-family="monospace" font-size="10">payment_terms_days: int</text>
+  </g>
+
+  <!-- Table 2: Products -->
+  <g transform="translate(285, 65)">
+    <rect width="220" height="160" rx="6" fill="#0c1d17" stroke="#165b43"/>
+    <rect width="220" height="28" rx="6" fill="url(#tableHeader)"/>
+    <text x="12" y="19" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">📦 Sheet: Products (PK: sku)</text>
+    <text x="12" y="50" fill="#a7f3d0" font-family="monospace" font-size="10">sku: string (OIL-CRY-001)</text>
+    <text x="12" y="70" fill="#e2e8f0" font-family="monospace" font-size="10">name: string</text>
+    <text x="12" y="90" fill="#e2e8f0" font-family="monospace" font-size="10">category: string</text>
+    <text x="12" y="110" fill="#e2e8f0" font-family="monospace" font-size="10">cost_price: number</text>
+    <text x="12" y="130" fill="#e2e8f0" font-family="monospace" font-size="10">selling_price: number</text>
+    <text x="12" y="150" fill="#e2e8f0" font-family="monospace" font-size="10">stock_qty: number (OnHand)</text>
+  </g>
+
+  <!-- Table 3: Invoices -->
+  <g transform="translate(545, 65)">
+    <rect width="230" height="160" rx="6" fill="#0c1d17" stroke="#165b43"/>
+    <rect width="230" height="28" rx="6" fill="url(#tableHeader)"/>
+    <text x="12" y="19" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">🧾 Sheet: Invoices (PK: invoice_no)</text>
+    <text x="12" y="50" fill="#a7f3d0" font-family="monospace" font-size="10">invoice_no: string (INV-2026-X)</text>
+    <text x="12" y="70" fill="#e2e8f0" font-family="monospace" font-size="10">customer_id: string (FK)</text>
+    <text x="12" y="90" fill="#e2e8f0" font-family="monospace" font-size="10">subtotal: number</text>
+    <text x="12" y="110" fill="#e2e8f0" font-family="monospace" font-size="10">vat_amount: number (14%)</text>
+    <text x="12" y="130" fill="#e2e8f0" font-family="monospace" font-size="10">total_egp: number</text>
+    <text x="12" y="150" fill="#e2e8f0" font-family="monospace" font-size="10">status: Paid | Pending</text>
+  </g>
+
+  <!-- Table 4: Payments -->
+  <g transform="translate(25, 245)">
+    <rect width="360" height="180" rx="6" fill="#0c1d17" stroke="#165b43"/>
+    <rect width="360" height="28" rx="6" fill="#0e5a3c"/>
+    <text x="12" y="19" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">💰 Sheet: Payments (PK: receipt_no)</text>
+    <text x="12" y="50" fill="#a7f3d0" font-family="monospace" font-size="10">receipt_no: string (REC-2026-X)</text>
+    <text x="12" y="70" fill="#e2e8f0" font-family="monospace" font-size="10">invoice_no: string (FK: Invoices.invoice_no)</text>
+    <text x="12" y="90" fill="#e2e8f0" font-family="monospace" font-size="10">customer_id: string (FK: Customers.id)</text>
+    <text x="12" y="110" fill="#e2e8f0" font-family="monospace" font-size="10">amount_paid: number (Decrements customer balance)</text>
+    <text x="12" y="130" fill="#e2e8f0" font-family="monospace" font-size="10">payment_method: Cash | Bank Transfer | Cheque</text>
+    <text x="12" y="150" fill="#e2e8f0" font-family="monospace" font-size="10">created_at: timestamp</text>
+    <text x="12" y="170" fill="#e2e8f0" font-family="monospace" font-size="10">created_by: string (User ID)</text>
+  </g>
+
+  <!-- Table 5: Audit Log -->
+  <g transform="translate(415, 245)">
+    <rect width="360" height="180" rx="6" fill="#0c1d17" stroke="#165b43"/>
+    <rect width="360" height="28" rx="6" fill="#0e5a3c"/>
+    <text x="12" y="19" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">🛡️ Sheet: AuditLog (Immutable Append-Only)</text>
+    <text x="12" y="50" fill="#a7f3d0" font-family="monospace" font-size="10">log_id: string (UUIDv4)</text>
+    <text x="12" y="70" fill="#e2e8f0" font-family="monospace" font-size="10">action: INSERT | UPDATE | OVERRIDE | VOID</text>
+    <text x="12" y="90" fill="#e2e8f0" font-family="monospace" font-size="10">entity: INVOICE | CUSTOMER | INVENTORY</text>
+    <text x="12" y="110" fill="#e2e8f0" font-family="monospace" font-size="10">payload_before: json</text>
+    <text x="12" y="130" fill="#e2e8f0" font-family="monospace" font-size="10">payload_after: json</text>
+    <text x="12" y="150" fill="#e2e8f0" font-family="monospace" font-size="10">timestamp: ISO8601</text>
+    <text x="12" y="170" fill="#e2e8f0" font-family="monospace" font-size="10">user_email: string</text>
+  </g>
+</svg>

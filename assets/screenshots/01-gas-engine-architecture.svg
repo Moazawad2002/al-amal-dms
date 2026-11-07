@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="gasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061c14"/>
+      <stop offset="100%" stop-color="#040e0a"/>
+    </linearGradient>
+    <linearGradient id="gasCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d2b20"/>
+      <stop offset="100%" stop-color="#081d15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#gasBg)"/>
+
+  <!-- Google Workspace Brand Bar -->
+  <rect x="25" y="20" width="750" height="42" rx="8" fill="#0b241b" stroke="#144d38" stroke-width="1"/>
+  <rect x="38" y="31" width="20" height="20" rx="3" fill="#0f9d58"/>
+  <text x="48" y="45" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="900" text-anchor="middle">田</text>
+  <text x="68" y="45" fill="#e6f4ea" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">Google Apps Script Enterprise DMS Engine • Cloud Spreadsheet Database Architecture</text>
+  <rect x="655" y="31" width="105" height="22" rx="4" fill="#0f9d58" fill-opacity="0.25" stroke="#0f9d58" stroke-width="1"/>
+  <text x="707" y="46" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">GAS V8 ENGINE</text>
+
+  <!-- Left: GAS Architecture Modules -->
+  <g transform="translate(25, 75)">
+    <rect x="0" y="0" width="240" height="400" rx="8" fill="url(#gasCard)" stroke="#144d38"/>
+    <text x="18" y="26" fill="#34d399" font-family="monospace" font-size="12" font-weight="700">// MODULAR SCRIPT FILES</text>
+    
+    <!-- File 1: Config.gs -->
+    <g transform="translate(15, 40)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#071b13" stroke="#134734"/>
+      <text x="12" y="22" fill="#e6f4ea" font-family="monospace" font-size="11" font-weight="700">Config.gs</text>
+      <text x="12" y="38" fill="#80b99c" font-family="system-ui, sans-serif" font-size="9">EGP currency, 14% VAT, 5% max discount</text>
+    </g>
+
+    <!-- File 2: Auth.gs & Users.gs -->
+    <g transform="translate(15, 100)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#071b13" stroke="#134734"/>
+      <text x="12" y="22" fill="#e6f4ea" font-family="monospace" font-size="11" font-weight="700">Auth.gs &amp; Users.gs</text>
+      <text x="12" y="38" fill="#80b99c" font-family="system-ui, sans-serif" font-size="9">Role check (Manager / Rep), session locks</text>
+    </g>
+
+    <!-- File 3: Database.gs -->
+    <g transform="translate(15, 160)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#071b13" stroke="#134734"/>
+      <text x="12" y="22" fill="#e6f4ea" font-family="monospace" font-size="11" font-weight="700">Database.gs</text>
+      <text x="12" y="38" fill="#80b99c" font-family="system-ui, sans-serif" font-size="9">CRUD abstraction, lock-safe atomic writes</text>
+    </g>
+
+    <!-- File 4: Audit.gs -->
+    <g transform="translate(15, 220)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#071b13" stroke="#134734"/>
+      <text x="12" y="22" fill="#e6f4ea" font-family="monospace" font-size="11" font-weight="700">Audit.gs</text>
+      <text x="12" y="38" fill="#80b99c" font-family="system-ui, sans-serif" font-size="9">Immutable logging of all financial mutations</text>
+    </g>
+
+    <!-- File 5: Utils.gs -->
+    <g transform="translate(15, 280)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#071b13" stroke="#134734"/>
+      <text x="12" y="22" fill="#e6f4ea" font-family="monospace" font-size="11" font-weight="700">Utils.gs</text>
+      <text x="12" y="38" fill="#80b99c" font-family="system-ui, sans-serif" font-size="9">Automated doc codes: INV-YYYY, RCP-YYYY</text>
+    </g>
+
+    <rect x="15" y="340" width="210" height="42" rx="6" fill="#0f9d58" fill-opacity="0.2" stroke="#0f9d58"/>
+    <text x="120" y="358" fill="#34d399" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Zero Infrastructure Cost</text>
+    <text x="120" y="372" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="9.5" text-anchor="middle">Runs fully within Google Workspace</text>
+  </g>
+
+  <!-- Right: Automated Business Execution Grid -->
+  <g transform="translate(280, 75)">
+    <!-- Top 3 Cloud System Counters -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="155" height="75" rx="8" fill="url(#gasCard)" stroke="#144d38"/>
+      <text x="15" y="22" fill="#80b99c" font-family="system-ui, sans-serif" font-size="10" font-weight="700">MAX REP DISCOUNT</text>
+      <text x="15" y="50" fill="#34d399" font-family="system-ui, sans-serif" font-size="20" font-weight="800">5.0% HARD CAP</text>
+      <text x="15" y="66" fill="#80b99c" font-family="system-ui, sans-serif" font-size="9.5">Enforced at Script Level</text>
+
+      <rect x="170" y="0" width="155" height="75" rx="8" fill="url(#gasCard)" stroke="#144d38"/>
+      <text x="185" y="22" fill="#80b99c" font-family="system-ui, sans-serif" font-size="10" font-weight="700">CREDIT LIMIT CEILING</text>
+      <text x="185" y="50" fill="#e6f4ea" font-family="system-ui, sans-serif" font-size="20" font-weight="800">50,000 EGP</text>
+      <text x="185" y="66" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="9.5">Auto-Hold on Exceeded</text>
+
+      <rect x="340" y="0" width="155" height="75" rx="8" fill="url(#gasCard)" stroke="#144d38"/>
+      <text x="355" y="22" fill="#80b99c" font-family="system-ui, sans-serif" font-size="10" font-weight="700">AUDIT TRAIL LOGS</text>
+      <text x="355" y="50" fill="#34d399" font-family="system-ui, sans-serif" font-size="20" font-weight="800">100% TRACEABLE</text>
+      <text x="355" y="66" fill="#80b99c" font-family="system-ui, sans-serif" font-size="9.5">Timestamp, User, IP, Mutation</text>
+    </g>
+
+    <!-- Middle: Google Sheets Relational Schema Simulation -->
+    <g transform="translate(0, 90)">
+      <rect x="0" y="0" width="495" height="195" rx="8" fill="url(#gasCard)" stroke="#144d38"/>
+      <text x="18" y="26" fill="#e6f4ea" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">Automated Spreadsheet Transaction Log</text>
+
+      <!-- Sheet Header -->
+      <rect x="18" y="42" width="460" height="28" rx="4" fill="#071b13"/>
+      <text x="30" y="60" fill="#80b99c" font-family="monospace" font-size="10">DOC_ID</text>
+      <text x="120" y="60" fill="#80b99c" font-family="monospace" font-size="10">TYPE</text>
+      <text x="180" y="60" fill="#80b99c" font-family="monospace" font-size="10">USER_ROLE</text>
+      <text x="280" y="60" fill="#80b99c" font-family="monospace" font-size="10">AMOUNT (EGP)</text>
+      <text x="390" y="60" fill="#80b99c" font-family="monospace" font-size="10">AUDIT STATUS</text>
+
+      <!-- Sheet Row 1 -->
+      <text x="30" y="94" fill="#e6f4ea" font-family="monospace" font-size="10.5">INV-2026-041</text>
+      <text x="120" y="94" fill="#34d399" font-family="system-ui, sans-serif" font-size="10.5">INVOICE</text>
+      <text x="180" y="94" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5">REPRESENTATIVE</text>
+      <text x="280" y="94" fill="#e6f4ea" font-family="monospace" font-size="10.5">38,500.00 ج.م</text>
+      <text x="390" y="94" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="700">✓ RECORDED</text>
+
+      <!-- Sheet Row 2 -->
+      <text x="30" y="126" fill="#e6f4ea" font-family="monospace" font-size="10.5">RCP-2026-088</text>
+      <text x="120" y="126" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5">RECEIPT</text>
+      <text x="180" y="126" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5">REPRESENTATIVE</text>
+      <text x="280" y="126" fill="#e6f4ea" font-family="monospace" font-size="10.5">25,000.00 ج.م</text>
+      <text x="390" y="126" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="700">✓ LEDGER ALLOC</text>
+
+      <!-- Sheet Row 3 -->
+      <text x="30" y="158" fill="#e6f4ea" font-family="monospace" font-size="10.5">PO-2026-019</text>
+      <text x="120" y="158" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="10.5">PURCHASE</text>
+      <text x="180" y="158" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5">MANAGER</text>
+      <text x="280" y="158" fill="#e6f4ea" font-family="monospace" font-size="10.5">112,000.00 ج.م</text>
+      <text x="390" y="158" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="700">✓ STOCK CREDITED</text>
+
+      <!-- Sheet Row 4 -->
+      <text x="30" y="190" fill="#e6f4ea" font-family="monospace" font-size="10.5">EXP-2026-054</text>
+      <text x="120" y="190" fill="#ec4899" font-family="system-ui, sans-serif" font-size="10.5">EXPENSE</text>
+      <text x="180" y="190" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5">MANAGER</text>
+      <text x="280" y="190" fill="#e6f4ea" font-family="monospace" font-size="10.5">4,300.00 ج.م</text>
+      <text x="390" y="190" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="700">✓ CASH BALANCED</text>
+    </g>
+
+    <!-- Bottom: Architectural Workflow Summary -->
+    <g transform="translate(0, 300)">
+      <rect x="0" y="0" width="495" height="100" rx="8" fill="url(#gasCard)" stroke="#144d38"/>
+      <text x="18" y="24" fill="#e6f4ea" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Business Control Highlights</text>
+      <text x="18" y="46" fill="#80b99c" font-family="system-ui, sans-serif" font-size="10">• Concurrency lock handler (`LockService`) avoids simultaneous row-overwrite during high field activity.</text>
+      <text x="18" y="65" fill="#80b99c" font-family="system-ui, sans-serif" font-size="10">• Automated batch calculation of payment aging (Current, 1-30, 31-60, >60 days overdue).</text>
+      <text x="18" y="84" fill="#80b99c" font-family="system-ui, sans-serif" font-size="10">• 100% compliant with standard Egyptian wholesale commercial cycles (Gross Sales, VAT, Cash vs Credit).</text>
+    </g>
+  </g>
+</svg>
